@@ -1,11 +1,19 @@
 {
-  "name": "project-lvl1-s308",
+  "name": "kit-braingame",
   "version": "0.0.1",
   "description": "Brain games project",
-  "main": "index.js",
+  "main": "dist/bin/brain-games.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel-node": "babel-node"
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
