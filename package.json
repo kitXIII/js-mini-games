@@ -2,7 +2,6 @@
   "name": "kit-brain-games",
   "version": "0.1.0",
   "description": "Brain games project",
-  "main": "dist/bin/brain-games.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -19,6 +18,13 @@
     "type": "git",
     "url": "git+https://github.com/kitXIII/project-lvl1-s308.git"
   },
+  "keywords": [
+    "game",
+    "brain",
+    "kit",
+    "example",
+    "project"
+  ],
   "author": "Nikita Konovalov",
   "license": "ISC",
   "bugs": {
