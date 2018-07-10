@@ -1,12 +1,10 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
-import greet from './index';
 
-const gameProcess = (game, attempts = 3) => {
+const gameProcess = (game, userName, attempts = 3) => {
   const gameTask = car(game);
   const questionPairGenerator = cdr(game);
 
-  const userName = greet();
   console.log(gameTask);
 
   for (let i = 0; i < attempts; i += 1) {
