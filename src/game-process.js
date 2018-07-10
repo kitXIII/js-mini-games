@@ -6,8 +6,8 @@ const gameProcess = (game, attempts = 3) => {
   const gameTask = car(game);
   const questionPairGenerator = cdr(game);
 
-  console.log(gameTask);
   const userName = greet();
+  console.log(gameTask);
 
   for (let i = 0; i < attempts; i += 1) {
     const questionPair = questionPairGenerator();
