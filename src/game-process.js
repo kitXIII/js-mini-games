@@ -6,6 +6,7 @@ const gameProcess = (game, attempts = 3) => {
   const gameTask = car(game);
   const questionPairGenerator = cdr(game);
 
+  console.log('Welcome to the Brain Games!');
   console.log(gameTask);
   const userName = greet();
 
