@@ -6,7 +6,7 @@ const ATTEMPTS = 3;
 const step = () => {
   const number = Math.round(Math.random() * (MAX_NUMBER + 1) - 0.5);
   const trueAnswer = number % 2 === 0 ? 'yes' : 'no';
-  const userAnswer = readlineSync(`Question: ${number} \n You answer: `);
+  const userAnswer = readlineSync.question(`Question: ${number} \nYou answer: `);
   if (userAnswer !== trueAnswer) {
     console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${trueAnswer}.\n`);
     return false;
