@@ -2,8 +2,9 @@ import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
 const gameProcess = (game, userName, attempts = 3) => {
-  const gameTask = car(game);
-  const questionPairGenerator = cdr(game);
+  const gameInstance = game();
+  const gameTask = car(gameInstance);
+  const questionPairGenerator = cdr(gameInstance);
 
   console.log(gameTask);
 
