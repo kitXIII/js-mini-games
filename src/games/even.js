@@ -8,7 +8,7 @@ const step = () => {
   const trueAnswer = number % 2 === 0 ? 'yes' : 'no';
   const userAnswer = readlineSync.question(`Question: ${number} \nYou answer: `);
   if (userAnswer !== trueAnswer) {
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${trueAnswer}.\n`);
+    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${trueAnswer}".\n`);
     return false;
   }
   console.log('Correct!');
