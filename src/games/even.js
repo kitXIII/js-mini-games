@@ -1,15 +1,18 @@
 import { cons } from 'hexlet-pairs';
 
-const GAME_TASK = 'Answer "yes" if number even otherwise answer "no"';
-const MAX_NUMBER = 100;
+const gameTask = 'Answer "yes" if number even otherwise answer "no"';
+const maxNumber = 100;
+
+const isEven = number => number % 2 === 0;
+const getRandomInt = () => Math.round(Math.random() * (maxNumber + 1) - 0.5);
 
 const questionPairGenerator = () => {
-  const number = Math.round(Math.random() * (MAX_NUMBER + 1) - 0.5);
-  const trueAnswer = number % 2 === 0 ? 'yes' : 'no';
-  const pair = cons(number, trueAnswer);
+  const question = getRandomInt();
+  const answer = isEven(question) ? 'yes' : 'no';
+  const pair = cons(question, answer);
   return pair;
 };
 
-const game = cons(GAME_TASK, questionPairGenerator);
+const game = cons(gameTask, questionPairGenerator);
 
 export default game;

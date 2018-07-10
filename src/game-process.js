@@ -6,12 +6,10 @@ const gameProcess = (game, attempts = 3) => {
   const gameTask = car(game);
   const questionPairGenerator = cdr(game);
 
-  console.log('Welcome to the Brain Games!');
   console.log(gameTask);
   const userName = greet();
 
-  let userAttempt = 1;
-  while (userAttempt <= attempts) {
+  for (let i = 0; i < attempts; i += 1) {
     const questionPair = questionPairGenerator();
     const question = car(questionPair);
     const trueAnswer = cdr(questionPair);
@@ -20,7 +18,6 @@ const gameProcess = (game, attempts = 3) => {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${trueAnswer}".\nLet's try again, ${userName}`);
       return;
     }
-    userAttempt += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);

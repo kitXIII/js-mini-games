@@ -1,9 +1,9 @@
 import { cons, cdr, car } from 'hexlet-pairs';
 
-const GAME_TASK = 'What is the result of the expression?';
-const MAX_NUMBER = 100;
+const gameTask = 'What is the result of the expression?';
+const maxNumber = 100;
 
-const getRandomInt = () => Math.round(Math.random() * (MAX_NUMBER + 1) - 0.5);
+const getRandomInt = () => Math.round(Math.random() * (maxNumber + 1) - 0.5);
 
 const getOperatorPair = () => {
   const numFactor = getRandomInt() % 3;
@@ -15,23 +15,23 @@ const getOperatorPair = () => {
     case 2:
       return cons('*', (a, b) => a * b);
     default:
-      throw new Error('There are not such operator');
+      throw new Error('There are not any operator');
   }
 };
 
 const questionPairGenerator = () => {
-  const num1 = getRandomInt();
-  const num2 = getRandomInt();
   const operatorPair = getOperatorPair();
-
-  const expression = `${num1} ${car(operatorPair)} ${num2}`;
   const operation = cdr(operatorPair);
-  const result = String(operation(num1, num2));
+  const operand1 = getRandomInt();
+  const operand2 = getRandomInt();
 
-  const pair = cons(expression, result);
+  const question = `${operand1} ${car(operatorPair)} ${operand2}`;
+  const answer = String(operation(operand1, operand2));
+
+  const pair = cons(question, answer);
   return pair;
 };
 
-const game = cons(GAME_TASK, questionPairGenerator);
+const game = cons(gameTask, questionPairGenerator);
 
 export default game;
