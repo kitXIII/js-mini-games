@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
-import greet from '..';
+import gameProcess from '../game-process';
 import game from '../games/even';
 
-console.log('Answer "yes" if number even otherwise answer "no"');
-const name = greet();
-game(name);
+gameProcess(game);
