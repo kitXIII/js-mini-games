@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import gameProcess from '../game-process';
-import { getRandomInt } from '../utils/common-utils';
+import getRandomInt from '../utils';
 
 const gameTask = 'What number is missing in this progression?';
 const maxStartNumber = 50;

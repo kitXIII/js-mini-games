@@ -1,10 +1,12 @@
 import { cons } from 'hexlet-pairs';
 import gameProcess from '../game-process';
-import { getRandomInt, isEven } from '../utils/common-utils';
+import getRandomInt from '../utils';
 
 const gameTask = 'Answer "yes" if number even otherwise answer "no"';
 const maxNumber = 100;
 const minNumber = 1;
+
+const isEven = number => number % 2 === 0;
 
 const questionPairGenerator = () => {
   const question = getRandomInt(minNumber, maxNumber);

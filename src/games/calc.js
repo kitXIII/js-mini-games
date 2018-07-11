@@ -1,6 +1,6 @@
 import { cons, cdr, car } from 'hexlet-pairs';
 import gameProcess from '../game-process';
-import { getRandomInt } from '../utils/common-utils';
+import getRandomInt from '../utils';
 
 const gameTask = 'What is the result of the expression?';
 const maxNumber = 100;

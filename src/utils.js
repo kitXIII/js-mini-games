@@ -3,6 +3,4 @@ const getRandomInt = (minNumber, maxNumber) => {
   return Math.round(randomFloat);
 };
 
-const isEven = number => number % 2 === 0;
-
-export { getRandomInt, isEven };
+export default getRandomInt;
