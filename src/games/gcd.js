@@ -1,4 +1,5 @@
 import { cons } from 'hexlet-pairs';
+import gameProcess from '../game-process';
 
 const gameTask = 'Find the greatest common divisor of given numbers.';
 const maxNumber = 100;
@@ -27,6 +28,8 @@ const questionPairGenerator = () => {
   return pair;
 };
 
-const game = () => cons(gameTask, questionPairGenerator);
+const game = cons(gameTask, questionPairGenerator);
 
-export default game;
+export default () => {
+  gameProcess(game);
+};

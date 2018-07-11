@@ -3,7 +3,7 @@ import { car, cdr } from 'hexlet-pairs';
 
 const attempts = 3;
 
-const process = (game) => {
+const gameProcess = (game) => {
   console.log('Welcome to the Brain Games!\n');
   const userName = readlineSync.question('May I have your name?\n');
   console.log(`Hello, ${userName}\n`);
@@ -12,9 +12,8 @@ const process = (game) => {
     return;
   }
 
-  const gameInstance = game();
-  const gameTask = car(gameInstance);
-  const questionPairGenerator = cdr(gameInstance);
+  const gameTask = car(game);
+  const questionPairGenerator = cdr(game);
 
   console.log(gameTask);
 
@@ -32,4 +31,4 @@ const process = (game) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default process;
+export default gameProcess;

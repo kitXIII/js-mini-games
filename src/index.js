@@ -1,5 +1,5 @@
-import process from './process';
+import gameProcess from './game-process';
 
 export default () => {
-  process();
+  gameProcess();
 };

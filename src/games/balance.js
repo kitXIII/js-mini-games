@@ -1,4 +1,5 @@
 import { cons, cdr, car } from 'hexlet-pairs';
+import gameProcess from '../game-process';
 
 const gameTask = 'Balance the given number.';
 const maxNumber = 10000;
@@ -59,6 +60,8 @@ const questionPairGenerator = () => {
   return pair;
 };
 
-const game = () => cons(gameTask, questionPairGenerator);
+const game = cons(gameTask, questionPairGenerator);
 
-export default game;
+export default () => {
+  gameProcess(game);
+};

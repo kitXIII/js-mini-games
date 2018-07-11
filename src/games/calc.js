@@ -1,4 +1,5 @@
 import { cons, cdr, car } from 'hexlet-pairs';
+import gameProcess from '../game-process';
 
 const gameTask = 'What is the result of the expression?';
 const maxNumber = 100;
@@ -32,6 +33,8 @@ const questionPairGenerator = () => {
   return pair;
 };
 
-const game = () => cons(gameTask, questionPairGenerator);
+const game = cons(gameTask, questionPairGenerator);
 
-export default game;
+export default () => {
+  gameProcess(game);
+};
