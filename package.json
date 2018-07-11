@@ -1,12 +1,13 @@
 {
   "name": "kit-brain-games",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "Brain games project",
   "bin": {
-    "brain-even": "dist/bin/brain-even.js",
+    "brain-seven": "dit/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-balance": "dist/bin/brain-balance.js"
+    "brain-balance": "dist/bin/brain-balance.js",
+    "brain-progression": "dist/bin/brain-progression.js"
   },
   "files": [
     "dist"
