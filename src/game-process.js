@@ -8,10 +8,6 @@ const gameProcess = (game) => {
   const userName = readlineSync.question('May I have your name?\n');
   console.log(`Hello, ${userName}\n`);
 
-  if (!game) {
-    return;
-  }
-
   const gameTask = car(game);
   const questionPairGenerator = cdr(game);
 

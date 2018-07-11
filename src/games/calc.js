@@ -1,13 +1,13 @@
 import { cons, cdr, car } from 'hexlet-pairs';
 import gameProcess from '../game-process';
+import { getRandomInt } from '../utils/common-utils';
 
 const gameTask = 'What is the result of the expression?';
 const maxNumber = 100;
-
-const getRandomInt = () => Math.round(Math.random() * (maxNumber + 1) - 0.5);
+const minNumber = 1;
 
 const getOperatorPair = () => {
-  const numFactor = getRandomInt() % 3;
+  const numFactor = getRandomInt(minNumber, maxNumber) % 3;
   switch (numFactor) {
     case 0:
       return cons('+', (a, b) => a + b);
@@ -23,8 +23,8 @@ const getOperatorPair = () => {
 const questionPairGenerator = () => {
   const operatorPair = getOperatorPair();
   const operation = cdr(operatorPair);
-  const operand1 = getRandomInt();
-  const operand2 = getRandomInt();
+  const operand1 = getRandomInt(minNumber, maxNumber);
+  const operand2 = getRandomInt(minNumber, maxNumber);
 
   const question = `${operand1} ${car(operatorPair)} ${operand2}`;
   const answer = String(operation(operand1, operand2));
