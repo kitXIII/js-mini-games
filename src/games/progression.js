@@ -14,18 +14,18 @@ const progressionGenerator = (firstValue, delta) => index => String(firstValue +
 const questionPairGenerator = () => {
   const startValue = getRandomInt(minStart, maxStart);
   const delta = getRandomInt(minDelta, maxDelta);
-  const hiddenElementIndex = getRandomInt(1, membersCount);
+  const hiddenItemIndex = getRandomInt(1, membersCount);
 
   const getProgressionItemStr = progressionGenerator(startValue, delta);
 
   let progressionString = '';
   for (let i = 1; i <= membersCount; i += 1) {
-    const subStr = (i === hiddenElementIndex) ? '..' : getProgressionItemStr(i);
+    const subStr = (i === hiddenItemIndex) ? '..' : getProgressionItemStr(i);
     progressionString = `${progressionString} ${subStr}`;
   }
 
   const question = progressionString;
-  const answer = getProgressionItemStr(hiddenElementIndex);
+  const answer = getProgressionItemStr(hiddenItemIndex);
 
   const pair = cons(question, answer);
   return pair;
