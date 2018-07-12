@@ -38,8 +38,7 @@ const questionPairGenerator = () => {
   return pair;
 };
 
-const game = cons(gameTask, questionPairGenerator);
-
 export default () => {
+  const game = cons(gameTask, questionPairGenerator);
   gameProcess(game);
 };
