@@ -49,27 +49,33 @@ The user must answer whether given number is even or not?
 
 **Command to start the game:**  `$ brain-even`
 
-  
+![](https://kitxiii.github.io/media/gif/even.gif)
+
+
 
 ## Calculator
 
 The user must enter the result of the mathematical expression.
 
-  
+
 
 **Command to start the game:**  `$ brain-calc`
 
-  
+![](https://kitxiii.github.io/media/gif/calc.gif)
+
+
 
 ## Greatest common divisor
 
 The user must calculate and enter the greatest common divisor of two numbers
 
-  
+
 
 **Command to start the game:**  `$ brain-gcd`
 
-  
+![](https://kitxiii.github.io/media/gif/gcd.gif)
+
+
 
 ## Balance
 
@@ -78,6 +84,8 @@ The user must balance the number. In this case, a balanced number is a number wh
   
 
 **Command to start the game:**  `$ brain-balance`
+
+![](https://kitxiii.github.io/media/gif/balance.gif)
 
   
 
@@ -89,7 +97,9 @@ The user must enter the missing part of the sequence of numbers, which is an ari
 
 **Command to start the game:**  `$ brain-progression`
 
+![](https://kitxiii.github.io/media/gif/progression.gif)
   
+
 
 ## Prime number
 
@@ -98,3 +108,5 @@ The user must answer whether given number is prime or not?
   
 
 **Command to start the game:**  `$ brain-prime`
+
+![](https://kitxiii.github.io/media/gif/prime.gif)
