@@ -1,6 +1,6 @@
 {
   "name": "kit-brain-games",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "Brain games project",
   "bin": {
     "brain-seven": "dist/bin/brain-even.js",
