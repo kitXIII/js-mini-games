@@ -1,8 +1,6 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/389e941417db2a924af3/maintainability)](https://codeclimate.com/github/kitXIII/project-lvl1-s308/maintainability) [![Build Status](https://travis-ci.org/kitXIII/project-lvl1-s308.svg?branch=master)](https://travis-ci.org/kitXIII/project-lvl1-s308)
+[![Maintainability](https://api.codeclimate.com/v1/badges/389e941417db2a924af3/maintainability)](https://codeclimate.com/github/kitXIII/project-lvl1-s308/maintainability) [![Build Status](https://travis-ci.org/kitXIII/project-lvl1-s308.svg?branch=master)](https://travis-ci.org/kitXIII/project-lvl1-s308) [![NPM Version](http://img.shields.io/npm/v/kit-brain-games.svg?style=flat)](https://www.npmjs.org/package/kit-brain-games)
 
 # Console logical mini-games kit-brain-games
-  
-
 
   
 
@@ -89,7 +87,7 @@ The user must balance the number. In this case, a balanced number is a number wh
 
   
 
-## Arithmetic progression"
+## Arithmetic progression
 
 The user must enter the missing part of the sequence of numbers, which is an arithmetic progression.
 
