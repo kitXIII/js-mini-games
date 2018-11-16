@@ -22,7 +22,7 @@
 
   
 
-Installed [Node.JS](https://nodejs.org)
+[Node.JS >= 8](https://nodejs.org)
 
   
 
