@@ -1,8 +1,7 @@
-import { cons } from 'hexlet-pairs';
 import gameProcess from '../game-process';
 import getRandomInt from '../utils';
 
-const gameTask = 'Is this number prime? (answer only "yes" or "no")';
+const task = 'Is this number prime? (answer only "yes" or "no")';
 const maxNumber = 200;
 const minNumber = 1;
 
@@ -22,14 +21,10 @@ const isPrime = (number) => {
   return true;
 };
 
-const questionPairGenerator = () => {
+const generator = () => {
   const question = getRandomInt(minNumber, maxNumber);
   const answer = isPrime(question) ? 'yes' : 'no';
-  const pair = cons(question, answer);
-  return pair;
+  return { question, answer };
 };
 
-export default () => {
-  const game = cons(gameTask, questionPairGenerator);
-  gameProcess(game);
-};
+export default () => gameProcess({ task, generator });
