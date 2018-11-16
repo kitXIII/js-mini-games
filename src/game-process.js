@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { car, cdr } from 'hexlet-pairs';
 
 const attempts = 3;
 
@@ -8,18 +7,15 @@ const gameProcess = (game) => {
   const userName = readlineSync.question('May I have your name?\n');
   console.log(`Hello, ${userName}\n`);
 
-  const gameTask = car(game);
-  const questionPairGenerator = cdr(game);
+  const { task, generator } = game;
 
-  console.log(gameTask);
+  console.log(task);
 
   for (let i = 0; i < attempts; i += 1) {
-    const questionPair = questionPairGenerator();
-    const question = car(questionPair);
-    const trueAnswer = cdr(questionPair);
+    const { question, answer } = generator();
     const userAnswer = readlineSync.question(`Question: ${question} \nYou answer: `);
-    if (userAnswer !== trueAnswer) {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${trueAnswer}".\nLet's try again, ${userName}`);
+    if (userAnswer !== answer) {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".\nLet's try again, ${userName}`);
       return;
     }
   }
