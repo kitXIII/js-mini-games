@@ -1,8 +1,7 @@
-import { cons } from 'hexlet-pairs';
 import gameProcess from '../game-process';
 import getRandomInt from '../utils';
 
-const gameTask = 'What number is missing in this progression?';
+const task = 'What number is missing in this progression?';
 const maxStart = 50;
 const minStart = 1;
 const maxDelta = 10;
@@ -11,7 +10,7 @@ const membersCount = 10;
 
 const progressionGenerator = (firstValue, delta) => index => String(firstValue + (delta * index));
 
-const questionPairGenerator = () => {
+const generator = () => {
   const startValue = getRandomInt(minStart, maxStart);
   const delta = getRandomInt(minDelta, maxDelta);
   const hiddenItemIndex = getRandomInt(1, membersCount);
@@ -24,14 +23,10 @@ const questionPairGenerator = () => {
     progressionString = `${progressionString} ${subStr}`;
   }
 
-  const question = progressionString;
-  const answer = getProgressionItemStr(hiddenItemIndex);
-
-  const pair = cons(question, answer);
-  return pair;
+  return {
+    question: progressionString,
+    answer: getProgressionItemStr(hiddenItemIndex),
+  };
 };
 
-export default () => {
-  const game = cons(gameTask, questionPairGenerator);
-  gameProcess(game);
-};
+export default () => gameProcess({ task, generator });
