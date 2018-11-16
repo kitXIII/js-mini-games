@@ -1,8 +1,7 @@
-import { cons } from 'hexlet-pairs';
 import gameProcess from '../game-process';
 import getRandomInt from '../utils';
 
-const gameTask = 'Balance the given number.';
+const task = 'Balance the given number.';
 const maxNumber = 10000;
 const minNumber = 10;
 
@@ -30,15 +29,10 @@ const getBalancedNumString = (number) => {
   return resultStr;
 };
 
-const questionPairGenerator = () => {
+const generator = () => {
   const question = getRandomInt(minNumber, maxNumber);
   const answer = getBalancedNumString(question);
-
-  const pair = cons(question, answer);
-  return pair;
+  return { question, answer };
 };
 
-export default () => {
-  const game = cons(gameTask, questionPairGenerator);
-  gameProcess(game);
-};
+export default () => gameProcess({ task, generator });
