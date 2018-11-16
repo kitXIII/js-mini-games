@@ -6,10 +6,7 @@ const maxNumber = 200;
 const minNumber = 1;
 
 const isPrime = (number) => {
-  if (number <= 1) {
-    return false;
-  }
-  if (number === 2 || number === 3) {
+  if (number <= 3) {
     return true;
   }
   const halfNumber = Math.floor(number / 2);
