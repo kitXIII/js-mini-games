@@ -1,11 +1,13 @@
+// @flow
+
 import gameProcess from '../game-process';
 import getRandomInt from '../utils';
 
-const task = 'What is the result of the expression?';
-const maxNumber = 100;
-const minNumber = 1;
+const task: string = 'What is the result of the expression?';
+const maxNumber: number = 100;
+const minNumber: number = 1;
 
-const getOperatorPair = () => {
+const getOperatorPair = (): { sign: string, operation: Function } => {
   const numFactor = getRandomInt(minNumber, maxNumber) % 3;
   switch (numFactor) {
     case 0:
@@ -19,7 +21,7 @@ const getOperatorPair = () => {
   }
 };
 
-const generator = () => {
+const generator = (): { question: string, answer: string } => {
   const { sign, operation } = getOperatorPair();
   const operand1 = getRandomInt(minNumber, maxNumber);
   const operand2 = getRandomInt(minNumber, maxNumber);

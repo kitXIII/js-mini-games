@@ -1,11 +1,13 @@
+// @flow
+
 import gameProcess from '../game-process';
 import getRandomInt from '../utils';
 
-const task = 'Is this number prime? (answer only "yes" or "no")';
-const maxNumber = 200;
-const minNumber = 1;
+const task: string = 'Is this number prime? (answer only "yes" or "no")';
+const maxNumber: number = 200;
+const minNumber: number = 1;
 
-const isPrime = (number) => {
+const isPrime = (number: number): boolean => {
   if (number <= 3) {
     return true;
   }
@@ -18,7 +20,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const generator = () => {
+const generator = (): { question: number, answer: string } => {
   const question = getRandomInt(minNumber, maxNumber);
   const answer = isPrime(question) ? 'yes' : 'no';
   return { question, answer };

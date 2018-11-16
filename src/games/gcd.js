@@ -1,13 +1,14 @@
+// @flow
 import gameProcess from '../game-process';
 import getRandomInt from '../utils';
 
-const task = 'Find the greatest common divisor of given numbers.';
-const maxNumber = 100;
-const minNumber = 1;
+const task: string = 'Find the greatest common divisor of given numbers.';
+const maxNumber: number = 100;
+const minNumber: number = 1;
 
-const getGcd = (num1, num2) => {
-  const iter = (a, b) => {
-    const r = a % b;
+const getGcd = (num1: number, num2: number): number => {
+  const iter = (a: number, b: number): number => {
+    const r: number = a % b;
     if (r === 0) {
       return b;
     }
@@ -16,7 +17,7 @@ const getGcd = (num1, num2) => {
   return num1 > num2 ? iter(num1, num2) : iter(num2, num1);
 };
 
-const generator = () => {
+const generator = (): { question: string, answer: string } => {
   const number1 = getRandomInt(minNumber, maxNumber);
   const number2 = getRandomInt(minNumber, maxNumber);
 
