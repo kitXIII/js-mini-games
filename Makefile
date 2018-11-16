@@ -5,7 +5,10 @@ start:
 	npm run babel-node -- src/bin/brain-games.js
 
 publish:
-	rm -rf dist
+	npm publish
+
+publish-patch:
+	npm version patch
 	npm publish
 
 lint:
