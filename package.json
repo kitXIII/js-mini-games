@@ -11,7 +11,7 @@
     "brain-prime": "dist/bin/brain-prime.js"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "files": [
     "dist"
@@ -41,21 +41,21 @@
   },
   "homepage": "https://github.com/kitXIII/project-lvl1-s308#readme",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.0.0",
-    "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-flow": "^7.0.0",
-    "babel-eslint": "^10.0.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-flow": "^7.9.0",
+    "babel-eslint": "^10.1.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-babel": "^5.2.1",
     "eslint-plugin-flowtype": "^3.1.1",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "flow-bin": "^0.84",
-    "flow-typed": "^2.5.1"
+    "flow-typed": "^3.1.0"
   },
   "dependencies": {
     "readline-sync": "^1.4.9"
